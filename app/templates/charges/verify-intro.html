@@ -8,7 +8,7 @@
   <link href="{{ prototypes_asset_path }}stylesheets/legal-document-1-0.css" media="screen" rel="stylesheet" type="text/css">
   <link href="{{ prototypes_asset_path }}stylesheets/verify-identity-0-1.css" media="screen" rel="stylesheet" type="text/css">
 {% endblock %}
-  
+
 {% block content %}
 
 <main id="wrapper" role="main">
@@ -23,28 +23,20 @@
 
 				<section class="step step-1">
 
-					<img class="icon" src="{{ prototypes_asset_path }}images/icon-crown-shield-2.png">
+					<img class="icon" src="{{ prototypes_asset_path }}images/icon-crown.png">
 
 					<div class="text-wrap">
 						<!-- <strong class="new">New</strong> -->
 						<h4>Before you verify this relationship</h4>
 
 						<h3>you need to verify your identity</h3>
-						
-						<p>Is this your first time verifying your identity?</p>
 
 						<div class="actions">
 							<a class="next track"
-								href="#"
-								data-category="Intro page step 1 - Yes button"
-								data-action="Clicked the Yes button">
-								Yes
-							</a>
-							<a class="been-verified track"
-								href="client-who-verified-you"
-								data-category="Intro page step 1 - No button"
-								data-action="Clicked the No button">
-								No
+								href="client-enter-token"
+								data-category="Intro page step 1 - Proceed button"
+								data-action="Clicked the Proceed button">
+								Proceed
 							</a>
 						</div>
 
