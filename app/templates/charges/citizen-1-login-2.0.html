@@ -1,13 +1,14 @@
 {% extends "global/prototypes_base.html" %}
 
 {% block page_title %}
-  Log in now
+Verify identity
 {% endblock %}
 
 {% block head %}
-  <link href="{{ prototypes_asset_path }}stylesheets/legal-document-1-0.css" media="screen" rel="stylesheet" type="text/css">
+<link href="{{ prototypes_asset_path }}stylesheets/legal-document-1-0.css" media="screen" rel="stylesheet" type="text/css">
+<link href="{{ prototypes_asset_path }}stylesheets/verify-identity-0-1.css" media="screen" rel="stylesheet" type="text/css">
 {% endblock %}
-  
+
 {% block content %}
 
 <main id="wrapper" role="main">
@@ -15,18 +16,53 @@
 
     {% include "includes/prototypes_banner.html" %}
 
-    <div class="outer-block">
-      <div class="inner-block">
 
-        <a href="{{next_page}}">
-          <img src="{{ prototypes_asset_path }}images/govuk-verify-1.png">
-        </a>
+    <div class="intro">
 
-      </div>
+      <div class="step-wrap" id="step-wrap">
+
+        <section class="step step-1">
+
+          <img class="icon" src="{{ prototypes_asset_path }}images/icon-crown.png">
+
+          <div class="text-wrap">
+            <!-- <strong class="new">New</strong> -->
+            <h4>Before you create this relationship</h4>
+
+            <h3>you need to verify your identity</h3>
+
+            <div class="actions">
+              <a class="next track"
+              href="#"
+              data-category="Intro page step 1 - Proceed button"
+              data-action="Clicked the Proceed button">
+              Proceed
+            </a>
+          </div>
+
+          <details>
+
+            <summary aria-controls="details-content-0" tabindex="0">
+              <span class="summary">Can I use Government Gateway?</span>
+            </summary>
+
+            <div class="panel-indent" id="details-content-0" aria-expanded="false" >
+              <p>
+                You can't use Government Gateway with this service, it's being replaced by GOV.UK Verify.
+              </p>
+            </div>
+
+          </details>
+
+        </div>
+
+      </section>
     </div>
 
 
   </div>
+
+</div>
 </main>
 
 {% endblock %}
