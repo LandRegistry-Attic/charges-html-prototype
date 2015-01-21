@@ -29,7 +29,54 @@ def edge_of_proto(e):
 
 # ---------------------------------------------------------------------------
 
-# LAST OF THE ALPHA PROTOTYPES!
+# 1: Conveyancer creates a case
+
+@app.route('/charges/conveyancer-start')
+def charges_login():
+  return render_template('charges/login.html', next_page="case-list")
+
+@app.route('/charges/case-list')
+def charges_case_list():
+  json_data=open('app/static/data/cases.json', "r")
+  data = json.load(json_data)
+  return render_template('charges/conveyancer-case-list.html', data=data, next_page="conveyancer-get-client-assurance")
+
+@app.route('/charges/conveyancer-get-client-assurance')
+def charges_conveyancer_get_client():
+  return render_template('charges/conveyancer-get-client-assurance.html')
+
+@app.route('/charges/conveyancer-find-property')
+def charges_conveyancer_find_property():
+  return render_template('charges/conveyancer-find-property.html', next_page='conveyancer_select_property')
+
+@app.route('/charges/conveyancer-select-property')
+def charges_conveyancer_select_property():
+  return render_template('charges/conveyancer-select-property.html')
+
+@app.route('/charges/conveyancer-select-task')
+def charges_conveyancer_select_task():
+  return render_template('charges/conveyancer-select-task.html')
+
+@app.route('/charges/conveyancer-add-clients')
+def charges_conveyancer_add_clients():
+  return render_template('charges/conveyancer-add-clients.html')
+
+@app.route('/charges/conveyancer-add-client-1')
+def charges_conveyancer_add_client_1():
+  return render_template('charges/conveyancer-add-client-1.html')
+
+@app.route('/charges/conveyancer-add-client-2')
+def charges_conveyancer_add_client_2():
+  return render_template('charges/conveyancer-add-client-2.html')
+
+@app.route('/charges/conveyancer-confirm')
+def charges_conveyancer_confirm():
+  return render_template('charges/conveyancer-confirm.html')
+
+@app.route('/charges/conveyancer-token')
+def charges_conveyancer_token():
+  return render_template('charges/conveyancer-token.html')
+
 
 # Transaction flows, citizens sign transfer and charge v3 -----------------
 
