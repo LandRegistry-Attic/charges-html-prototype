@@ -133,17 +133,6 @@ def client_verify_2_2():
 @app.route('/charges/client-who-verified-you')
 def relationship_starts_client_verify_who_1():
   return render_template('charges/verify-who.html')
-
-# GOV.UK verify - Sub flow Step 3 - experian sign in
-@app.route('/charges/client-experian-sign-in')
-def relationship_starts_client_verify_experian_sign_in_1():
-  return render_template('charges/verify-sign-in.html')
-
-# GOV.UK verify - Sub flow Step 4 - experian 2nd phase sign in
-@app.route('/charges/client-experian-sign-in-part-2')
-def relationship_starts_client_verify_experian_sign_in_2nd_part_1():
-  return render_template('charges/verify-sign-in-2.html')
-
 #       end Sub flow - GOV.UK Verification ---------------------
 
 # Step 2 - Client 1 enters token
