@@ -8,7 +8,7 @@
   <link href="{{ prototypes_asset_path }}stylesheets/legal-document-1-0.css" media="screen" rel="stylesheet" type="text/css">
   <link href="{{ prototypes_asset_path }}stylesheets/relationship-starts-2-0.css" media="screen" rel="stylesheet" type="text/css">
 {% endblock %}
-  
+
 {% block content %}
 
 <main id="wrapper" role="main">
@@ -28,7 +28,7 @@
         <article class="legal-document--bounds">
 
           <section class="legal-document--item">
-            
+
             <h2 class="heading-small">You are authorising:</h2>
 
             <p itemscope itemtype="http://schema.org/Corporation">
@@ -48,10 +48,17 @@
             </p>
           </section><!-- end item -->
 
+          <section class="legal-document--item legal-document--bordered">
+
+            <h3 class="heading-small">To make the following changes:</h3>
+            <p class="text">Mortgage</p>
+
+          </section><!-- end item -->
+
 
           <section class="legal-document--item legal-document--bordered">
 
-            <h2 class="heading-small">To act on on the following property:</h2>
+            <h2 class="heading-small">On the following property:</h2>
 
             <div class="grid grid-1-2">
               <p itemscope itemtype="http://schema.org/PostalAddress">
@@ -76,14 +83,6 @@
           </section><!-- end item -->
 
 
-          <section class="legal-document--item legal-document--bordered">
-
-            <h3 class="heading-small">To make the following changes:</h3>
-            <p class="text">Mortgage</p>
-
-          </section><!-- end item -->
-
-
 
         </article>
 
@@ -96,7 +95,7 @@
             </label>
           </div>
           <div class="form-group">
-            <button type="submit" class="button">Verify relationship</button>
+            <button type="submit" class="button">Verify transaction</button>
           </div>
         </form>
 
