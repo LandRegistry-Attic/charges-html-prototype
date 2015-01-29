@@ -156,6 +156,41 @@ def client_view_register_2_1():
   return render_template('charges/register-2.1-no-pending.html')
 
 
+# Create Mortgage Login Page
+@app.route('/create-mortgage/login')
+def transfer_login():
+  return render_template('charges/login.html', next_page="conveyancer-case-list")
+
+# Create Mortgage Conveyancer case list page
+@app.route('/create-mortgage/conveyancer-case-list')
+def conveyancer_mortgage_case_list():
+  json_data=open('app/static/data/mortgage-cases.json', "r")
+  data = json.load(json_data)
+  return render_template('charges/conveyancer-case-list.html', data=data)
+
+# Transfer prototypes, mortgage details page
+@app.route('/create-mortgage/mortgage-details')
+def transfer_mortgage_details():
+  return render_template('charges/mortgage-details.html')
+
+# Transfer prototypes, mortgage details entered page
+@app.route('/create-mortgage/mortgage-details-entered')
+def transfer_mortgage_details_entered():
+  return render_template('charges/mortgage-details-entered.html')
+
+# Transfer prototypes, summary page
+@app.route('/create-mortgage/summary')
+def transfer_summary():
+  json_data=open('app/static/data/complete-transfer.json', "r")
+  data = json.load(json_data)
+  return render_template('charges/summary.html', editable=True, conveyancer="buyer", data=data)
+
+# Transfer prototypes, done page
+@app.route('/create-mortgage/done')
+def transfer_done():
+  return render_template('charges/done.html')
+
+
 if __name__ == '__main__':
   # Bind to PORT if defined, otherwise default to 5000.
   port = int(os.environ.get('PORT', 5000))
