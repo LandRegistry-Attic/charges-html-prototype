@@ -1,9 +1,9 @@
 <section class="document-section document-section--bordered">
-  <h2 class="heading-medium">Buyers{% if conveyancer == "buyer" %} <span class="alert-flag">acting on behalf of</span>{% endif %}</h2>
+  <h2 class="heading-medium">Borrowers{% if conveyancer == "buyer" %} {% endif %}</h2>
 
   <div class="grid-wrapper document-section__item">
     <div class="grid grid-1-4">
-      <p class="inner-block">No. of proprietors</p>
+      <p class="inner-block">No. of borrowers</p>
     </div>
     <div class="grid grid-1-4">
       <div class="inner-block">{{ data.buyers|length }}</div>
@@ -13,7 +13,7 @@
   {% for buyer in data.buyers  %}
   <div class="grid-wrapper document-section__item">
     <div class="grid">
-      <p class="inner-block"><b>Buyer {{ loop.index }}</b></p>
+      <p class="inner-block"><b>Borrower {{ loop.index }}</b></p>
     </div>
   </div>
   <div class="grid-wrapper document-section__item">
