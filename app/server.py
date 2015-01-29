@@ -188,7 +188,12 @@ def transfer_summary():
 # Transfer prototypes, done page
 @app.route('/create-mortgage/done')
 def transfer_done():
-  return render_template('charges/done.html')
+  return render_template('charges/done.html', next_page="send-to-borrowers")
+
+# Transfer prototypes, done page
+@app.route('/create-mortgage/send-to-borrowers')
+def send_to_borrowers():
+  return render_template('charges/sent-to-borrowers.html')
 
 
 if __name__ == '__main__':

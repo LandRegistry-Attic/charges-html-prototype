@@ -40,25 +40,6 @@
 
   {% include "charges/partials/_buyers-section.html" %}
 
-  <section class="document-section document-section--bordered">
-    <div class="grid-wrapper document-section__item document-section__item--collapse {% if data.declaration is undefined %}empty-state{% endif %}">
-      <div class="grid grid-1-4">
-        <div class="inner-block">Declaration of trust</div>
-      </div>
-      <div class="grid grid-1-4">
-        <div class="inner-block">{{ data.declaration }}</div>
-      </div>
-      {% if editable %}
-      <div class="grid grid-1-4">
-        <div class="inner-block">
-          <a href="create-transfer#declaration" class="button-secondary">Change<span class="visuallyhidden"> declaration of trust</span></a>
-        </div>
-      </div>
-      {% endif %}
-    </div>
-  </section><!-- end declaration section -->
-
-
 
 
   {% if role != "seller" %}
