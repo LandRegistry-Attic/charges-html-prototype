@@ -205,7 +205,7 @@ def submit_charge_login():
 #Submit Charge Case List`
 @app.route('/submit-charge/case-list')
 def submit_charge_case_list():
-  json_data=open('app/static/data/cases.json', "r")
+  json_data=open('app/static/data/cases-signed.json', "r")
   data = json.load(json_data)
   return render_template('charges/conveyancer-case-list-signed.html', data=data)
 
