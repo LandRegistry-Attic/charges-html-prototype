@@ -166,7 +166,7 @@ def transfer_login():
 def conveyancer_mortgage_case_list():
   json_data=open('app/static/data/mortgage-cases.json', "r")
   data = json.load(json_data)
-  return render_template('charges/conveyancer-case-list.html', data=data)
+  return render_template('charges/conveyancer-case-list-add-mortgage.html', data=data)
 
 # Transfer prototypes, mortgage details page
 @app.route('/create-mortgage/mortgage-details')

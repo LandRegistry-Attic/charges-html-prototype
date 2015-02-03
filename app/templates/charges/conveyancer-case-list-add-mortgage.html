@@ -19,8 +19,7 @@ Conveyancer case list | Create transfer
     {% include "includes/prototypes_banner.html" %}
 
     <div class="inner-block">
-      <p><u>Create Case</u> > <u>Confirm Transaction</u> > <u>Create Mortgage</u> > <u>Sign Mortgage</u> > <u><b>Date and Submit</b></u></p>
-
+      <p><u>Create Case</u> > <u>Confirm Transaction</u> > <u><b>Create Mortgage</b></u> > <u>Sign Mortgage</u> > <u>Date and Submit</u></p>
 
       <h1 class="heading-large">Case list</h1>
 
@@ -47,7 +46,7 @@ Conveyancer case list | Create transfer
 
         <ul class="grid case-list">
 
-          {% from "charges/_case-item-signed.html" import build_case_item %}
+          {% from "charges/_case-item.html" import build_case_item %}
           {% for case in data.cases %}
           {{ build_case_item(case) }}
           {% endfor %}
