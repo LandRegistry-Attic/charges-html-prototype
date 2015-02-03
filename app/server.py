@@ -193,14 +193,21 @@ def transfer_done():
 # Transfer prototypes, done page
 @app.route('/create-mortgage/send-to-borrowers')
 def send_to_borrowers():
-  return render_template('charges/sent-to-borrowers.html')
+  return render_template('charges/sent-to-borrowers.html', next_page="case-list")
 
 #Beginning of step 5
 
 #Submit charge login
 @app.route('/submit-charge/login')
 def submit_charge_login():
-  return render_template('charges/login.html')
+  return render_template('charges/login.html', next_page="case-list")
+
+#Submit Charge Case List`
+@app.route('/submit-charge/case-list')
+def submit_charge_case_list():
+  json_data=open('app/static/data/cases.json', "r")
+  data = json.load(json_data)
+  return render_template('charges/conveyancer-case-list-signed.html', data=data)
 
 
 if __name__ == '__main__':
