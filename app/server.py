@@ -212,8 +212,12 @@ def submit_charge_case_list():
 #Submit charge date mortgage
 @app.route('/submit-charge/date-mortgage')
 def submit_charge_date_charge():
-  return render_template('charges/lender-date-mortgage.html')
+  return render_template('charges/lender-date-mortgage.html', next_page="charge-submitted")
 
+#Submit charge charge submitted
+@app.route('/submit-charge/charge-submitted')
+def submit_charge_charge_submitted():
+  return render_template('charges/charge-submitted.html')
 
 if __name__ == '__main__':
   # Bind to PORT if defined, otherwise default to 5000.
