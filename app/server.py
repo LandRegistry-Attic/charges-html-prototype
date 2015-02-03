@@ -209,6 +209,11 @@ def submit_charge_case_list():
   data = json.load(json_data)
   return render_template('charges/conveyancer-case-list-signed.html', data=data)
 
+#Submit charge date mortgage
+@app.route('/submit-charge/date-mortgage')
+def submit_charge_date_charge():
+  return render_template('charges/lender-date-mortgage.html')
+
 
 if __name__ == '__main__':
   # Bind to PORT if defined, otherwise default to 5000.
