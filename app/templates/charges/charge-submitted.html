@@ -1,0 +1,41 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+  Relationship token
+{% endblock %}
+
+{% block head %}
+  <link href="{{ prototypes_asset_path }}stylesheets/legal-document-1-0.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="{{ prototypes_asset_path }}stylesheets/relationship-starts-2-0.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+<main id="wrapper" role="main">
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="outer-block">
+      <div class="inner-block">
+
+        <div class="callout callout--action-notice callout--generated-token">
+          <h1>You've dated the mortgage deeds. Reference:123456</h1>
+        </div>
+
+        <div class="text">
+          <p class="lede">You’ve dated the mortgage deeds for this property. This has now been submitted to Land Registry for processing</p>
+
+
+          <h2 class="heading-medium">What happens next</h2>
+          <p>Land Registry will now process the submitted mortgage and notify you when this is complete. if you need to contact Land Registry regarding this mortgage please quote the reference number above</p>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+</main>
+
+{% endblock %}
