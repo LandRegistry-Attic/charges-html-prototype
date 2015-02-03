@@ -195,6 +195,13 @@ def transfer_done():
 def send_to_borrowers():
   return render_template('charges/sent-to-borrowers.html')
 
+#Beginning of step 5
+
+#Submit charge login
+@app.route('/submit-charge/login')
+def submit_charge_login():
+  return render_template('charges/login.html')
+
 
 if __name__ == '__main__':
   # Bind to PORT if defined, otherwise default to 5000.
