@@ -3,7 +3,6 @@ html-prototypes
 
 html-prototypes is a [Flask](http://flask.pocoo.org/) application, with [Grunt](http://gruntjs.com/) workflow to generate assets.
 
-
 ## Requirements
 
 ### [Node](http://nodejs.org/)
