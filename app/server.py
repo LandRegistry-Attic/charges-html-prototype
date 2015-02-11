@@ -58,6 +58,10 @@ def charges_conveyancer_find_property_advanced():
 def charges_conveyancer_select_property():
   return render_template('charges/conveyancer-select-property.html')
 
+@app.route('/charges/conveyancer-select-property-advanced')
+def charges_conveyancer_select_property_advanced():
+  return render_template('charges/conveyancer-select-property-advanced.html')
+
 @app.route('/charges/conveyancer-select-task')
 def charges_conveyancer_select_task():
   return render_template('charges/conveyancer-select-task.html')
